@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pyramid Slide</title>
+    <style>
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            background-color: #FFEFD5;
+        }
+
+        .invalid-field {
+            border: 1px solid red;
+        }
+        #pyramid {
+            color: blue;
+            padding: 05px;
+        }
+        h1 {
+            font-family: quicksand;
+        }
+        #topportion {
+            width: 500px;
+            height: 40px;
+            margin: auto;
+            background: rgba(76, 175, 80, 0.5);
+            border-color: black;
+            border-radius: 10px;
+            border-bottom: 4px solid black;
+            margin-bottom: 5px;
+            border-right: 2px solid black;
+        }
+        #mainportion {
+            font-weight: bold;
+            border-radius: 10px;
+            background: rgba(76, 175, 80, 0.2);
+            margin: auto;
+            width: 500px;
+            min-height: 500px;
+            border: .1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="topportion"><h1>Pyramid Slide</h1></div>
+    <form>
+    <div id="mainportion"><label>Brick Style:
+    <select onchange="userInput(value)" id="symbol">
+        <option value="@">@</option>
+        <option value="#">#</option>
+        <option value="X">X</option>
+        <option value=":)">:)</option>
+        <option value="()">()</option>
+        <option value="&">&</option>
+    </select>
+    </label>
+        <label for="height">How high?</label>
+            <input type="range" oninput="outputUpdate(value)" onchange="userInput(this.value)" min="0" max="20" id="height">
+            <output for="height" id="rangeNum">10</output>
+    </form>
+
+
+    <div id="pyramid"></div></div>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="pyramid-slide.js"></script>
+</body>
+</html>
